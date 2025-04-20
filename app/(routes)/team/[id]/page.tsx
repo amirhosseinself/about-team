@@ -6,9 +6,9 @@ import { BadgeCheck, Code2, GraduationCap, Mail, MapPin } from "lucide-react";
 import { MembersDetailsData } from "@/data/data";
 
 interface MemberPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 // ✅ متادیتا داینامیک برای هر عضو
