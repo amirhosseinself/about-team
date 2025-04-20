@@ -3,7 +3,7 @@ import Members from "@/components/team/Members";
 
 const TeamPage = () => {
   return (
-    <div className="container py-10">
+    <div className="container pt-[70px]">
       <Header>معرفی تیم نودیا</Header>
       <Members />
     </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
-import { ThemeProvider } from "@/components/theme-provider";
+// import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/QueryProvider";
 
 import "@/app/styles/globals.css";
@@ -51,8 +51,8 @@ const montserrat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "noCafe",
-  description: "منوی دیجیتالی کافه/رستوران شما",
+  title: "Nudia team",
+  description: "معرفی تیم نودیا",
 };
 
 export default function RootLayout({
@@ -63,30 +63,30 @@ export default function RootLayout({
       <body
         className={`${charismaExtraBold.variable} ${charismaRegular.variable} ${irSansXRegular.variable} ${irSansXMedium.variable} ${irSansXBold.variable} ${montserrat.variable} rtl font-sm`}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
-        >
-          {/* Wrapping client-side providers */}
-          <QueryProvider>
-            <Navbar />
-            <div className="pt-16">{children}</div>
-          </QueryProvider>
-          <Toaster
-            position="top-center"
-            reverseOrder={false}
-            toastOptions={{
-              style: {
-                background: "#f472b6",
-                color: "#fff",
-                fontSize: "14px",
-                direction: "rtl",
-              },
-            }}
-          />
-        </ThemeProvider>
+        > */}
+        {/* Wrapping client-side providers */}
+        <QueryProvider>
+          <Navbar />
+          {children}
+        </QueryProvider>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              background: "#f472b6",
+              color: "#fff",
+              fontSize: "14px",
+              direction: "rtl",
+            },
+          }}
+        />
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
