@@ -3,7 +3,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeCheck, Code2, GraduationCap, Mail, MapPin } from "lucide-react";
+import {
+  BadgeCheck,
+  Code2,
+  GraduationCap,
+  Linkedin,
+  Instagram,
+  X,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 interface Props {
   member: {
@@ -15,7 +24,7 @@ interface Props {
     education: string;
     location: string;
     linkedin?: string;
-    twitter?: string;
+    instagram?: string;
     x?: string;
     email?: string;
   };
@@ -107,18 +116,26 @@ export default function MemberContent({ member }: Props) {
       {/* Social Links */}
       <div className="flex justify-center gap-4 mt-6">
         {member.linkedin && (
-          <Link href={member.linkedin} target="_blank">
-            <BadgeCheck className="text-blue-600 hover:text-blue-700 transition" />
+          <Link
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin className="text-blue-600 hover:text-blue-700 transition" />
           </Link>
         )}
-        {member.twitter && (
-          <Link href={member.twitter} target="_blank">
-            <BadgeCheck className="text-sky-400 hover:text-sky-500 transition" />
+        {member.instagram && (
+          <Link
+            href={member.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram className="text-rose-500 hover:text-rose-600 transition" />
           </Link>
         )}
         {member.x && (
-          <Link href={member.x} target="_blank">
-            <BadgeCheck className="text-neutral-800 hover:text-black transition" />
+          <Link href={member.x} target="_blank" rel="noopener noreferrer">
+            <X className="text-neutral-800 hover:text-black transition" />
           </Link>
         )}
         {member.email && (
