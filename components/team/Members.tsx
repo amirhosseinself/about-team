@@ -1,4 +1,4 @@
-import { MembersData } from "@/public/data";
+import { MembersData } from "@/data/data";
 import MemberCard from "./MemberCard";
 
 const Members = () => {
